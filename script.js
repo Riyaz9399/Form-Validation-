@@ -15,8 +15,6 @@ function showError(input, message){
 function showSuccess(input){
     const formControl =input.parentElement;
     formControl.className = "form-control success";
-    const btn = document.getElementById("submit");
-    btn.innerText = "Success";
 }
 
 function checkUsername(){
@@ -61,5 +59,7 @@ form.addEventListener("submit",function(e){
     checkPassword();
     checkConfirmPassword();
     checkPasswordMatch();
+    
+
 });
 
