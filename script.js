@@ -12,16 +12,19 @@ function showError(input, message){
     small.style.visibility = "visible";
 }
  
-function showSuccess(input){
+function showSuccess(input,message){
     const formControl =input.parentElement;
     formControl.className = "form-control success";
+    const small = formControl.querySelector("small");
+    small.innerText = message;
+    small.style.visibility = "hidden";
 }
 
 function checkUsername(){
     if(username.value === ""){
         showError(username,"Username is required");
     }else{
-        showSuccess(username,"your form is filled ");
+        showSuccess(username);
     }
 }
 function checkEmail(){
